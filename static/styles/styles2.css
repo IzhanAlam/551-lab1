@@ -1,0 +1,97 @@
+.navbar{
+    background-color: black;
+    display:flex;
+}
+
+.navbar a:hover{
+    background-color: White;
+    color: black;
+}
+.navbar a {
+   color: white;
+   padding: 14px 20px;
+   text-decoration: none;
+   text-align: center;
+ }
+
+ @media (max-width: 700px) {
+    .navbar {   
+    flex-direction: column;
+  }
+}
+
+.header{
+
+    position: relative;
+    text-align: left;
+    color:  black;
+
+}
+
+.bottomcenter{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+
+}
+
+.picContainer{
+    position: relative;
+    text-align: center;
+    color:  white;
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  p.round{
+    border: 2px black;
+    border-radius: 12px;
+  }
+
+  .sideCol{
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .rowCon{
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: ghostwhite;
+    color: white;
+    text-align: center;
+  }
+
+  .main2 {
+    flex: 100%;
+    background-color: white;
+    padding: 20px;
+  }
+
+  table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid black;
+}
