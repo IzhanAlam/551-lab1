@@ -14,10 +14,6 @@
 
     <body>
 
-        <div class="header">
-            <h1>Book Reviews</h1>
-        </div>
-
         <div class="navbar">
             <a href="FinishedWebsite.html">Home</a>
             <a href="places.html">Books</a>
@@ -26,28 +22,23 @@
 
         <div class = "picContainer">
             <img src= "{{url_for('static', filename='pictures/Image2.jpg')}}" width = 100% height = "200" alt="Photo of mountains">
-            <div class = "centered"><font color="white"><font size="72"><p style ="text-align: center;"><h1 class="display-4">Books</h1></p></font></font></div>
+            <div class = "centered"><font color="white"><font size="72"><p style ="text-align: center;"><h1 class="display-4">{% block picword %}{% endblock %}</h1></p></font></font></div>
         </div>
 
         <div class="rowCon">
             <div class = "sideCol">
-                <h2>Sign Up Here!</h2>
+                {% block sidecontent %}{% endblock %}
             </div>
 
             <div class = "main">
-                <h2>About this website:</h2>
-                <div class="media">
-                    <img src="{{url_for('static', filename='pictures/Books.jpg')}}" height="300" width="400" class="align-self-center mr-3" alt="...">
-                    <div class="media-body">
-                      <h5 class="mt-0">How this website works.</h5>
-                      <p>Sign up or sign in to the website to search a book to get corresponding results. When you click on the book 
-                          after searching, you will be taken to a book page with more deatils and reviews of the book.
-                          <br>
-                        <p>
-                          You are also able to submit reviews of the book if you wish to do so (limited to one review per book)
-                        </p>
 
-                        </p>
+                {% block rightHeader %}{% endblock %}
+
+                <div class="media">
+                    {% block image %}{% endblock %}
+
+                    <div class="media-body">
+                      {% block imagecontent %}{% endblock %}
         
                     </div>
                   </div>
@@ -56,5 +47,11 @@
 
         </div>  
 
+        
+
+
     </body>
+
+    
 </html>
+

@@ -1,0 +1,45 @@
+{% extends "template.html" %}
+
+{% block picword %}Welcome.{% endblock %}
+
+{% block sidecontent %}
+
+    <h2>Sign in below.</h2>
+    <form action = "{{url_for('signedin')}}" method = "post">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Username</label>
+        <input type="text" class="form-control" name="Username" placeholder="Enter Username">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+    Don't have an account?  
+    <a href="{{ url_for('signup') }}">Click here.</a>
+
+
+
+{% endblock %}
+
+{% block rightHeader %}
+<h2>About this website:</h2>
+{% endblock %}
+
+{% block image %}
+<img src="{{url_for('static', filename='pictures/Books.jpg')}}" height="300" width="400" class="align-self-center mr-3" alt="...">
+{% endblock %}
+
+{% block imagecontent %}
+<h5 class="mt-0">How this website works.</h5>
+<p>Sign up or sign in to the website to search a book to get corresponding results. When you click on the book 
+    after searching, you will be taken to a book page with more deatils and reviews of the book.
+    <br>
+  <p>
+    You are also able to submit reviews of the book if you wish to do so (limited to one review per book)
+  </p>
+
+  </p>
+{% endblock %}
