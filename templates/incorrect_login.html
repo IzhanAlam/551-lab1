@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+
+{% block picword %} 
+
+{% if check_user != None  %}
+Username in use or incorrect password.
+
+{% elif check_user == None %}
+Incorrect username/password.
+{% endif %}
+
+{% endblock %}

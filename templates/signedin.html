@@ -1,3 +1,61 @@
 {% extends "template.html" %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 {% block picword %}Hello {{ name }}.{% endblock %}
+
+{% block sidecontent %}
+
+<div class="detailBox">
+  <div class="titleBox">
+    <label><strong>Forum</strong></label>
+  </div>
+  <div class="commentBox">
+      <p class="taskDescription">Type a comment for others to see.</p>
+  </div>
+  <div class="actionBox">
+            {% for i in comments %}
+              <div>
+                Author: {{ i.name }}
+                <br>
+                <font size = "-1">Posted on: <span class="date sub-text">{{ i.timestamp }}</span></font>
+              </div>
+              <div class="commentText">
+                  <p class="">{{ i.body }}</p> 
+                <hr>
+              </div>
+            {% endfor %}
+  </div>
+</div>
+
+
+
+
+<form action = "{{url_for('gen_comments')}}" method = "post">
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Enter your comment</label>
+      <textarea class="form-control" name="comment" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+
+
+
+{% endblock %}
+
+
+{% block rightHeader %}
+<h2>Get searching for your favourite books now.</h2>
+{% endblock %}
+
+
+
+{% block imagecontent %}
+<h5 class="mt-0">Search the database for books: </h5>
+<form class="example" action="{{ url_for('results')}}" method = "post">
+  <input type="text" placeholder="Search for books..." name="query">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+{% endblock %}

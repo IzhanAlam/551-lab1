@@ -1,18 +1,40 @@
 {% extends "template.html" %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 {% block picword %}Sign up now.{% endblock %}
 
 {% block sidecontent %}
 
-<form>
-    <div class="form-group">
-      <label for="formGroupExampleInput">Create a username</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
-    </div>
-    <div class="form-group">
-      <label for="formGroupExampleInput2">Create a password</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
-    </div>
-  </form>
+<form action = "{{url_for('created_account')}}" method = "post">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Create a username</label>
+    <input type="text" class="form-control" name="username" placeholder="Enter Username" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Create a password</label>
+    <input type="password" class="form-control" name="password" placeholder="Password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
   {% endblock %}
+
+
+
+{% block rightHeader %}
+<h2>When you sign up.</h2>
+{% endblock %}
+
+
+
+{% block imagecontent %}
+<h5 class="mt-0">Sign up today and write a review on your favourite books.</h5>
+<p>
+    <br>
+  <p>
+    
+  </p>
+  Get access to review submissions and Gooreads Review Data which include perks such as average rating and number of ratings.
+  </p>
+{% endblock %}

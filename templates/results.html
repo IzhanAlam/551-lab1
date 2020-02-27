@@ -1,0 +1,55 @@
+{% extends "template.html" %}
+
+{% block picword %}Your result.{% endblock %}
+
+
+{% block sidecontent %}
+
+
+
+{% endblock %}
+
+
+{% block rightHeader %}
+
+<h2>You have searched for: {{ query }} </h2>
+
+{% endblock %}
+
+
+{% block image %}
+{% if selected_book|length == 0 %}
+<p>No results.</p>
+{% else %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ISBN</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Published</th>
+      </tr>
+    </thead>
+    {% for i in selected_book %}
+    <tbody>
+      <tr>
+        <td><a href="{{ url_for('book_page', isbn=i.isbn)}}"> {{ i.isbn }}</a></td>
+        <td><a href="{{ url_for('book_page', isbn=i.isbn)}}"> {{ i.title }}</a></td>
+        <td>{{ i.author }}</td>
+        <td>{{ i.published }}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+
+  {% endif %}
+
+{% endblock %}
+
+
+{% block imagecontent %}
+
+
+
+{% endblock %}
+
