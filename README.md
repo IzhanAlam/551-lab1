@@ -13,3 +13,6 @@ REQUIREMENTS:
 7. REVIEW SUBMISSION
 8. GOODVIEWS DATA
 9. API ACCESS
+
+Youtube Walkthrough: Yotube: https://www.youtube.com/watch?v=WTLY1BsBA5g&feature=youtu.be
+
