@@ -1,7 +1,5 @@
 # Project 1
 
-ENGO 551
-
 REQUIREMENTS:
 
 1. REGISTRATION
